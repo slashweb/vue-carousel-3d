@@ -37,7 +37,7 @@
                     const lIndex = this.rightIndex
                     if (rIndex >= 0 || lIndex >= 0) {
                         styles = rIndex >= 0 ? this.calculatePosition(rIndex, true, this.zIndex) : this.calculatePosition(lIndex, false, this.zIndex)
-                        styles.opacity = 1
+                        styles.opacity = .2
                         styles.visibility = 'visible'
                     }
 
