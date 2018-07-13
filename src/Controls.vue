@@ -2,12 +2,12 @@
     <div class="carousel-3d-controls">
         <a href="#" class="prev" @click.prevent="parent.goPrev()"
            :class="{ disabled: !parent.isPrevPossible }"
-           :style="`width: ${width}px; height: ${height}px; line-height: ${height}px;`">
+           :style="`width: ${width}px; height: ${height}px; line-height: ${height}px; color: ${colorArrows}`">
             <span v-html="prevHtml"></span>
         </a>
         <a href="#" class="next" @click.prevent="parent.goNext()"
            :class="{ disabled: !parent.isNextPossible }"
-           :style="`width: ${width}px; height: ${height}px; line-height: ${height}px;`">
+           :style="`width: ${width}px; height: ${height}px; line-height: ${height}px; color: ${colorArrows}`">
             <span v-html="nextHtml"></span>
         </a>
     </div>
@@ -44,7 +44,15 @@
             nextHtml: {
                 type: String,
                 default: '&rsaquo;'
+            },
+            /**
+             * Color arrows
+             */
+            colorArrows:{
+                type: String,
+                default: '#333'
             }
+
         },
         data () {
             return {

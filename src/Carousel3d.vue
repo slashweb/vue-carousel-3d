@@ -4,7 +4,7 @@
 			<slot></slot>
 		</div>
 		<controls v-if="controlsVisible" :next-html="controlsNextHtml" :prev-html="controlsPrevHtml"
-		          :width="controlsWidth" :height="controlsHeight"></controls>
+		          :width="controlsWidth" :height="controlsHeight" :colorArrows="colorArrows"></controls>
 	</div>
 </template>
 
@@ -118,7 +118,11 @@
             onMainSlideClick: {
                 type: Function,
                 default: noop
-            }
+            },
+			colorArrows: {
+                type: String,
+				default: '#333'
+			}
         },
         data () {
             return {
