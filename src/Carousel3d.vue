@@ -122,7 +122,15 @@
 			colorArrows: {
                 type: String,
 				default: '#333'
-			}
+			},
+			nextSlide: {
+                type: Number,
+				default: 0
+			},
+            prevSlide: {
+                type: Number,
+                default: 0
+            }
         },
         data () {
             return {
@@ -142,7 +150,15 @@
         watch: {
             count () {
                 this.computeData()
-            }
+            },
+
+            nextSlide (){
+                this.goNext()
+			},
+
+            prevSlide (){
+                this.goPrev()
+			}
         },
         computed: {
             isLastSlide () {
